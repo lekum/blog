@@ -2,7 +2,7 @@
 subtitle = ""
 title = "From Nikola to Hugo"
 bigimg = ""
-date = "2017-02-17T20:00:24+02:00"
+date = "2017-02-17T20:00:24+01:00"
 
 +++
 
