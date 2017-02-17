@@ -1,0 +1,23 @@
+baseurl= "https://lekum.org/"
+languageCode = "es"
+theme = "beautifulhugo"
+title = "lekum.org"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[Params]
+  subtitle = "Some hacking"
+  logo = "img/avatar.png"
+
+[Author]
+  name = "Alejandro Guirao"
+  twitter = "lekum"
+  linkedin = "pub/alejandro-guirao-rodríguez/a/232/744"
+  github = "lekum"
+
+[[menu.main]]
+  name = "About me"
+  url = "/page/about-me/"
+
+[taxonomies]
+  tag = "tags"
