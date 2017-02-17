@@ -18,7 +18,7 @@ For example, with Hypothesis is quite easy to create [fuzzy testing](http://hypo
 
 Let's say that we have a module `money.py`  with a function to convert between two currencies:
 
-```python
+```
 rates_table = {
         "USD": 102.42,
         "EUR": 113.54,
@@ -34,7 +34,7 @@ def convert_currency(previous_currency, new_currency, amount):
 
 It is a toy example, but there is an easy-to-spot bug there. We are going to test it with Hypothesis:
 
-```python
+```
 from hypothesis import strategies as st, given
 from money import rates_table, convert_currency
 

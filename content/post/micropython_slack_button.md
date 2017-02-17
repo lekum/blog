@@ -128,7 +128,7 @@ You can find examples of usage for the different libraries included (`network`, 
 
 Finally, we will have to create the main loop, that is quite similar to the Arduino version:
 
-```python
+```
 if __name__ == "__main__":
 
     SSID = "<YOUR_SSID>"

@@ -13,7 +13,7 @@ So I decided to try [Errbot](http://errbot.io/), a Pythonic library for creating
 
 As I only wanted the functionality to issue `ansible` commands, [the plugin that I developed](https://github.com/lekum/ansiblebot) was really simple:
 
-```python
+```
 from errbot import BotPlugin, botcmd
 from subprocess import check_output
 

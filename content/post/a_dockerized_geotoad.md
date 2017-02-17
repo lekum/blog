@@ -16,7 +16,7 @@ There is a great piece of software called [GeoToad](https://github.com/HughP/geo
 
 Playing with Docker, I have found interesting to create a Dockerfile for an image with GeoToad and its dependencies installed:
 
-```Dockerfile
+```
 FROM ubuntu:14.04
 MAINTAINER Alejandro Guirao <lekumberri@gmail.com>
 
