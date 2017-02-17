@@ -1,20 +1,20 @@
 language: go
 go:
-- 1.8
+  - 1.8
 before_install:
-- openssl aes-256-cbc -K $encrypted_84f17b3aef8a_key -iv $encrypted_84f17b3aef8a_iv -in deploy/server.pem.enc -out deploy/server.pem -d
+  - openssl aes-256-cbc -K $encrypted_84f17b3aef8a_key -iv $encrypted_84f17b3aef8a_iv -in deploy/server.pem.enc -out deploy/server.pem -d
 addons:
   apt:
     packages:
       - rsync
       - openssh-client
 install:
-- eval $(ssh-agent -s)
-- chmod 600 deploy/server.pem && ssh-add deploy/server.pem
-- mkdir -p ~/.ssh
-- echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-- GOPATH=$HOME/go go get github.com/spf13/hugo
+  - eval $(ssh-agent -s)
+  - chmod 600 deploy/server.pem && ssh-add deploy/server.pem
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  - GOPATH=$HOME/go go get github.com/spf13/hugo
 script:
-- "$HOME/go/bin/hugo"
+  - "$HOME/go/bin/hugo"
 after_success:
-- rsync -avz --delete public/ $BLOG_DEPLOYMENT_URL
+  - rsync -avz --delete public/ $BLOG_DEPLOYMENT_URL
