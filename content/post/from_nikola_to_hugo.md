@@ -6,7 +6,7 @@ date = "2017-02-17T20:00:24+01:00"
 
 +++
 
-Today I have migrated the static generator for this site from [Nikola](https://getnikola.com/) to [Hugo](https://gohugo.io/). Part of the motivation has been to try a new technology, part of it, having less movable parts. Nikola is great but carries quite a lot of dependencies (specially with the themes). My previous workardound involved building a [Docker image]( wa://hub.docker.com/r/lekum/docker-nikola/) with the tools, and using that image inside a [GitlabCI](https://about.gitlab.com/gitlab-ci/) pipeline that built the statics and deployed them to my server.
+Today I have migrated the static generator for this site from [Nikola](https://getnikola.com/) to [Hugo](https://gohugo.io/). Part of the motivation has been trying a new technology, part of it, having less movable parts. Nikola is great but carries quite a lot of dependencies (specially with the themes). My previous workaround involved building a [Docker image]( wa://hub.docker.com/r/lekum/docker-nikola/) with the tools, and using that image inside a [GitlabCI](https://about.gitlab.com/gitlab-ci/) pipeline that built the statics and deployed them to my server.
 
 My articles were written in [Markdown](https://en.wikipedia.org/wiki/Markdown), so I didn't have to change the contents. I made a *quick-and-dirty* Python script to reformat the headers of each article (specially `title` and `date`). Appart from that, I chose a [theme](https://github.com/halogenica/beautifulhugo) and wrote a small [config.toml](https://github.com/lekum/blog/blob/master/config.toml).
 
@@ -44,4 +44,4 @@ travis encrypt-file deploy/server.pem --add
 
 This command executes an AES-256 simmetric encryption and add the line to your `.travis.yml` to perform the decoding at the beginning of the execution.
 
-The only issue that I currently have is that the old URLs to the posts do not work, because Hugo expects the posts inside a `post` folder. I definitely need to read the documentation :-)
+The only issue that I currently face is the fact that the old URLs of the posts do not work, because Hugo expects the posts inside a `post` folder. I definitely need to read the documentation :-)
