@@ -59,6 +59,7 @@ At this point, we have MicroPython installed on the board. Now, we'll have to co
 - Connect it to a WiFi network and take note of the IP address:
 
 ```
+>> import network
 >> sta_if = network.WLAN(network.STA_IF)
 >> sta_if.active(True)
 >> sta_if.connect("<YOUR_SSID>", "<YOUR_PASSWORD>")
