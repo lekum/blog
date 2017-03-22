@@ -22,7 +22,7 @@ source esptool/bin/activate
 (esptool) pip install esptool
 ```
 
-- Connect the board and take note of the port (e.g. `/dev/ttyUSB0`) that shows up in the ouput of `dmesg` command.
+- Connect the board and take note of the port (e.g. `/dev/ttyUSB0`) that shows up in the output of `dmesg` command.
 
 - Erase the flash memory of the board:
 
@@ -171,4 +171,4 @@ You can find the complete script [here](https://github.com/lekum/esp8266sketches
 Follow these links if you want to learn more:
 
 - [MicroPython on Wemos D1](http://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/setup.html)
-- [MicroPython on ESP8166](https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html)
+- [MicroPython on ESP8266](https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html)
