@@ -10,6 +10,7 @@ Pythonista, DevOps engineer, Linux-lover, electronics tinkerer, ham radio operat
 
 # Talks
 
+- **Enter MicroPython** - Talk at [Python Madrid user group](https://www.meetup.com/es-ES/Madrid-Python-Meetup/events/238237895/) - March 2017 - [Slides](https://speakerdeck.com/lekum/enter-micropython)
 - **Haciendo el (Chaos) Monkey - Updated** - Talk at [IGZ Meetup](http://www.intelygenz.es/haciendo-chaos-monkey-teoria-practica/) - February 2017 - [Video](https://www.youtube.com/watch?v=Vkn8UCcjZUE) - [Interview](https://bbvaopen4u.com/es/actualidad/chaos-monkey-la-herramienta-que-provoca-pequenos-fallos-para-evitar-otros-mayores)
 - **4 orquestadores de Docker en 40 minutos** - Talk at [Codemotion Madrid 2016](https://2016.codemotion.es/agenda.html#5732408326356992/83544007) - November 2016 - [Slides](https://speakerdeck.com/lekum/4-orquestadores-de-docker-en-40-minutos)
 - **Haciendo el (Chaos) Monkey** - Talk at the [OWASP Madrid Meetup](https://www.meetup.com/es-ES/OWASP-Madrid/) - October 2016 - [Video](https://youtu.be/1jeTZPWTCoE?t=81) - [Slides](http://slides.com/alejandroguiraorodriguez/haciendo-el-chaos-monkey)
