@@ -88,8 +88,8 @@ In order to connect to the WiFi, we will need to populate the sketch with the SS
 /*
  WIFI CONFIGURATION
  */
-const String SSID = "<YOUR_SSID>"
-const String pwd = "<YOUR_PASSWORD>"
+char SSID[] = "<YOUR_SSID>";
+char pwd[] = "<YOUR_PASSWORD>";
 ```
 
 In the `setup()` part of the sketch, we will initialize the pins, the Serial connection (to enable USB debugging) and we will connect to the WiFi:
