@@ -10,6 +10,7 @@ Pythonista, DevOps engineer, Linux-lover, electronics tinkerer, ham radio operat
 
 # Talks
 
+- **Docker images for Python** - Lightning talk at [PyDay Galicia 2017](https://pyday2017.python-vigo.es/es/) - June 2017 - [Video](http://pyvideo.org/pyday-galicia-2017/lightning-talks-2-docker-image-for-python.html)
 - **From 0 to Anomaly Detection in your infrastructure metrics in 15 minutes** - Lightning talk at [Source{d} Tech Talks - Infrastructure](http://talks.sourced.tech/infra-2017/) - March 2017 - [Video](https://www.youtube.com/watch?v=MIK5YZaTmhc) - [Slides](https://speakerdeck.com/lekum/from-0-to-anomaly-detection-in-your-infrastructure-metrics-in-15-minutes)
 - **Enter MicroPython** - Talk at [Python Madrid user group](https://www.meetup.com/es-ES/Madrid-Python-Meetup/events/238237895/) - March 2017 - [Slides](https://speakerdeck.com/lekum/enter-micropython)
 - **Haciendo el (Chaos) Monkey - Updated** - Talk at [IGZ Meetup](http://www.intelygenz.es/haciendo-chaos-monkey-teoria-practica/) - February 2017 - [Video](https://www.youtube.com/watch?v=Vkn8UCcjZUE) - [Interview](https://bbvaopen4u.com/es/actualidad/chaos-monkey-la-herramienta-que-provoca-pequenos-fallos-para-evitar-otros-mayores)

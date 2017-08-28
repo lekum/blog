@@ -23,3 +23,5 @@ This past Saturday I have attended to [PyDay Galicia 2017](https://pyday2017.pyt
 - [Jose Corral](https://twitter.com/jcleira) gave a talk about the evolution of the technological stack in his company and a brief introduction to Kubernetes.
 
 And after some lightning talks, and a couple of post-event beers, I should say that it has been a very refreshing one-day conference. Kudos to the organizers!
+
+P.D: My lightning talk [Docker images for Python](http://pyvideo.org/pyday-galicia-2017/lightning-talks-2-docker-image-for-python.html) is now available online!
