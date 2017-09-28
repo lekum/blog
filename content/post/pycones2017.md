@@ -7,7 +7,7 @@ bigimg = ""
 
 Last weekend I attended to [PyConES2017](https://2017.es.pycon.org/), the annual Python conference in Spain. These are some talks and links of things that I have found interesting:
 
-- The Irene ([@irenuchi](https://twitter.com/irenuchi)) and Javier Torres' [workshop](https://2017.es.pycon.org/en/schedule/que-tiene-en-comun-donald-trump-con-los-tacones-en-las-oficinas-de-reino-unido/) on basic geospatial analysis using [GeoPandas](http://geopandas.org/) and [CartoFrames](https://github.com/CartoDB/cartoframes) was amazing. Just donwload the [Jupyter Notebook](https://github.com/javitonino/talks/blob/master/PyConES_17/GeoPandas/GeoPandas.ipynb) and give it a try!
+- The Irene ([@irenuchi](https://twitter.com/irenuchi)) and Javier Torres' [workshop](https://2017.es.pycon.org/en/schedule/que-tiene-en-comun-donald-trump-con-los-tacones-en-las-oficinas-de-reino-unido/) on basic geospatial analysis using [GeoPandas](http://geopandas.org/) and [CartoFrames](https://github.com/CartoDB/cartoframes) was amazing. Just download the [Jupyter Notebook](https://github.com/javitonino/talks/blob/master/PyConES_17/GeoPandas/GeoPandas.ipynb) and give it a try!
 
 - Naomi Ceder ([@NaomiCeder](https://twitter.com/NaomiCeder)) gave a keynote named ["Come for the Language, stay for the Community"](https://docs.google.com/presentation/d/1HlzmbzDgH9HE2a7wXXXn54Jqtt1llMD7dSRdmKMvytg/edit#slide=id.p) that reinforced the idea that the Python community is somehow special in its openness and newcomers-friendly character. Very inspiring!
 
