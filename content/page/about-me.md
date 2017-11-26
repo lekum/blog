@@ -10,6 +10,7 @@ Pythonista, DevOps engineer, Linux-lover, electronics tinkerer, ham radio operat
 
 # Talks
 
+- **4 CI/CD systems in 40 minutes** - Talk at [Codemotion Madrid 2017](https://2017.codemotion.es/agenda.html#5649626120060928/5321022534320128) - November 2017 - [Video](https://www.youtube.com/watch?v=ktldSQC0-lU) (Spanish) - [Slides](https://speakerdeck.com/lekum/cd-systems-in-40-minutes)
 - **Serverless with Python** - Talk at [PyConES 2017](https://2017.es.pycon.org/es/) - September 2017 - [Video](https://www.youtube.com/watch?v=2FhVU9qIuhE) - [Slides](https://speakerdeck.com/lekum/serverless-with-python)
 - **Docker images for Python** - Lightning talk at [PyDay Galicia 2017](https://pyday2017.python-vigo.es/es/) - June 2017 - [Video](http://pyvideo.org/pyday-galicia-2017/lightning-talks-2-docker-image-for-python.html)
 - **From 0 to Anomaly Detection in your infrastructure metrics in 15 minutes** - Lightning talk at [Source{d} Tech Talks - Infrastructure](http://talks.sourced.tech/infra-2017/) - March 2017 - [Video](https://www.youtube.com/watch?v=MIK5YZaTmhc) - [Slides](https://speakerdeck.com/lekum/from-0-to-anomaly-detection-in-your-infrastructure-metrics-in-15-minutes)
