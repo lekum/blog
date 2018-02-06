@@ -5,7 +5,7 @@ date = "2018-02-05T18:00:00+02:00"
 bigimg = ""
 +++
 
-Last weekend I have attended [FOSDEM 2018](https://fosdem.org/2018/). This year, I have spent the saturday attending the Go devroom. It has been quite exhausting (I wasn't able even to go the bathroom if I didn't want to lose my seat) but since this devroom is so crowded, it seems the only possible way. These are the link of some talks that have been specially interesting to me, many talks were recorded so if the videos are not available in the linked pages, just wait a few more days:
+Last weekend I have attended [FOSDEM 2018](https://fosdem.org/2018/). This year, I have spent the saturday attending the Go devroom. It has been quite exhausting (I wasn't able even to go the bathroom if I didn't want to lose my seat) but since this devroom is so crowded, it seems the only possible way. These are the links of some talks that have been specially interesting to me, many talks were recorded so if the videos are not available in the linked pages, just wait a few more days:
 
 - Gildas Chabot ([@gildaschabot](https://twitter.com/gildaschabot)) introduced the project [upspin](https://upspin.io/). A very interesting idea from Rob Pike to expand the idea of namespaces to your data. [Link](https://fosdem.org/2018/schedule/event/upspin/)
 - Sam Boyer ([@sdboyer](https://twitter.com/sdboyer)) explained how to use [dep](https://golang.github.io/dep/), the Go dependency management tool. Short talk but straight to the point, showing the basics of the tool and the usual workflow for it. [Link](https://fosdem.org/2018/schedule/event/dep/)
