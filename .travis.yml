@@ -14,6 +14,11 @@ install:
   - mkdir -p ~/.ssh
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   - GOPATH=$HOME/go go get github.com/gohugoio/hugo
+  - mkdir ~/src
+  - cd ~/src
+  - git clone https://github.com/gohugoio/hugo.git
+  - cd hugo
+  - go install
 script:
   - "$HOME/go/bin/hugo"
 after_success:
