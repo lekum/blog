@@ -13,7 +13,7 @@ install:
   - chmod 600 deploy/server.pem && ssh-add deploy/server.pem
   - mkdir -p ~/.ssh
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-  - GOPATH=$HOME/go go get github.com/spf13/hugo
+  - GOPATH=$HOME/go go get github.com/gohugoio/hugo
 script:
   - "$HOME/go/bin/hugo"
 after_success:
