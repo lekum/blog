@@ -1,6 +1,6 @@
 language: go
 go:
-  - 1.8
+  - 1.12
 before_install:
   - openssl aes-256-cbc -K $encrypted_84f17b3aef8a_key -iv $encrypted_84f17b3aef8a_iv -in deploy/server.pem.enc -out deploy/server.pem -d
 addons:
@@ -13,7 +13,7 @@ install:
   - chmod 600 deploy/server.pem && ssh-add deploy/server.pem
   - mkdir -p ~/.ssh
   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-  - curl -sL "https://github.com/gohugoio/hugo/releases/download/v0.51/hugo_0.51_Linux-64bit.tar.gz" -o hugo.tar.gz
+  - curl -sL "https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz" -o hugo.tar.gz
   - tar -zxvf hugo.tar.gz
 script:
   - "./hugo"
