@@ -10,6 +10,7 @@ Pythonista, DevOps engineer, Linux-lover, electronics tinkerer, ham radio operat
 
 # Talks
 
+- **Python para administradores de sistemas** - Talk at [Commit Conf 2019](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5700831059902464) - November 2019 - [Video](https://youtu.be/12YJ5ORzppI) - [Slides](https://speakerdeck.com/lekum/python-para-administradores-de-sistemas)
 - **4 logging and metrics systems in 40 minutes - t3chfest edition** - Talk at [T3chfest 2019](https://t3chfest.uc3m.es/2019/programa/4-sistemas-logging-metricas-40-minutos/) - March 2019 - [Video](https://www.youtube.com/watch?v=hEHgetyvPWs) - [Slides](https://speakerdeck.com/lekum/t3chfest-4-logging-and-metrics-systems-in-40-minutes/)
 - **4 logging and metrics systems in 40 minutes** - Talk at [Commit 2018](https://2018.commit-conf.com/) - November 2018 - [Video](https://www.youtube.com/watch?v=IlfeNpLLpXs) - [Slides](https://speakerdeck.com/lekum/4-logging-and-metrics-systems-in-40-minutes)
 - **4 CI/CD systems in 40 minutes** - Talk at [Codemotion Madrid 2017](https://2017.codemotion.es/agenda.html#5649626120060928/5321022534320128) - November 2017 - [Video](https://www.youtube.com/watch?v=ktldSQC0-lU) (Spanish) - [Slides](https://speakerdeck.com/lekum/cd-systems-in-40-minutes)
