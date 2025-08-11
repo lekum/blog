@@ -1,10 +1,9 @@
-baseurl= "https://lekum.org/"
+baseurl= "/"
 languageCode = "es"
 theme = "beautifulhugo"
 title = "lekum.org"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
-
 
 
 [Params]
