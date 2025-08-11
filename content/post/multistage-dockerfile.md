@@ -12,7 +12,7 @@ First, you would build an image with all the development dependencies, build the
 
 With the multi-stage builds, it is possible to specify this workflow inside the Dockerfile. Let's assume that we want a Python image with the [pycrypto](https://pypi.python.org/pypi/pycrypto) package installed, as described in the file `requirements.txt`:
 
-```
+```bash
 $ cat requirements.txt
 
 pycrypto
@@ -20,7 +20,7 @@ pycrypto
 
 We could use this Dockerfile:
 
-```
+```dockerfile
 FROM python:3 as python-base
 COPY requirements.txt .
 RUN pip install -r requirements.txt

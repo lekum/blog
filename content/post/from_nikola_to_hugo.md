@@ -12,7 +12,7 @@ My articles were written in [Markdown](https://en.wikipedia.org/wiki/Markdown), 
 
 Hugo is a [Golang](https://golang.org/)-compiled single binary, so it is operationally much simpler to deploy, on my laptop and on the CI pipeline. For this new version of the blog, I have moved the repo to [Github](https://github.com/lekum/blog) and the CI to [Travis](https://travis-ci.org/lekum/blog). This is my new `.travis.yml`:
 
-```
+```yaml
 language: go
 go:
   - 1.8
@@ -37,7 +37,7 @@ after_success:
 
 The only *tricky* part is allowing ssh access to my server. After reading the [documentation](https://docs.travis-ci.com/user/encrypting-files/), I have opted for commiting an encrypted version of a `.pem` file that I have generated for this purpose. The encryption is performed once using the `travis` command line interface:
 
-```
+```bash
 travis login
 travis encrypt-file deploy/server.pem --add
 ```

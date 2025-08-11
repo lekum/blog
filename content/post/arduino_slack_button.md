@@ -14,13 +14,13 @@ This board can be programmed in many different ways. In this article, I will sho
 
 First, we will initialize a folder for the project with the command:
 
-```
+```bash
 platformio init -b d1_mini
 ```
 
 You should now have this folder structure:
 
-```
+```bash
 .
 ├── lib
 │   └── readme.txt
@@ -30,7 +30,7 @@ You should now have this folder structure:
 
 You can verify that the project is configured to use the Wemos D1 mini board using the arduino programming interface:
 
-```
+```bash
 $ cat platformio.ini
 
 ; PlatformIO Project Configuration File
@@ -51,13 +51,13 @@ framework = arduino
 
 We will place the sketch that we will develop in the `src` folder (e.g. `src/slack.ino`). In order to compile and upload it to the board, connect it via USB to the computer and run:
 
-```
+```bash
 platformio run -t upload
 ```
 
 If you need to debug using the USB connection, you can use:
 
-```
+```bash
 platformio device monitor
 ```
 
@@ -71,7 +71,7 @@ The Wemos D1 must be powered, for instance, via a USB charger or external batter
 
 In order to be able to POST to the Slack channel, we will need to enable an Incoming Webhook. Please refer to the [Slack documentation](https://api.slack.com/incoming-webhooks) in order to do that. You will need these values for the sketch:
 
-```
+```c
 /*
  SLACK CONFIGURATION
  */
@@ -84,7 +84,7 @@ const String slack_username = "<SLACK_USERNAME>";
 
 In order to connect to the WiFi, we will need to populate the sketch with the SSID and password:
 
-```
+```c
 /*
  WIFI CONFIGURATION
  */
@@ -94,7 +94,7 @@ char pwd[] = "<YOUR_PASSWORD>";
 
 In the `setup()` part of the sketch, we will initialize the pins, the Serial connection (to enable USB debugging) and we will connect to the WiFi:
 
-```
+```c
 void setup()
 {
   pinMode(ledPin, OUTPUT);
@@ -121,7 +121,7 @@ void setup()
 
 In addition, adding this special code snippet, we can enable Over The Air (OTA) updates of the sketch, so that we can upload the code via WiFi:
 
-```
+```c
   // OTA setup
   ArduinoOTA.onStart([]() {
     Serial.println("Start");
@@ -145,7 +145,7 @@ ArduinoOTA.begin();
 
 The main `loop()` will just start the OTA service, read the button values and call the `postMessageToSlack()` function if pressed, lighting the LED if the result is `true`:
 
-```
+```c
 void loop()
 {
   // Start handling OTA updates
@@ -166,7 +166,7 @@ void loop()
 
 The `postMessageToSlack()` function performs the HTTP POST constructing the request and sending it using the `WiFiClientSecure` and returns a `bool` that is `true` when the status code is `200 OK`:
 
-```
+```c
 bool postMessageToSlack(String msg)
 {
   const char* host = "hooks.slack.com";
@@ -209,7 +209,7 @@ bool postMessageToSlack(String msg)
 
 The code of the complete sketch can be found [here](https://github.com/lekum/esp8266sketches/tree/master/slack). If you want to perform OTA updates to the sketch, just plug the USB and run the serial connector monitor to see the IP of the Wemos D1, then add this to the `[env:d1_mini]` section of the `platformio.ini` file:
 
-```
+```ini
 upload_port=<IP>
 ```
 

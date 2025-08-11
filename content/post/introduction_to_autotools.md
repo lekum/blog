@@ -15,12 +15,12 @@ I am going to describe an example of how a tiny C command-line application can b
 Let's start with the C code. We have these three files:
 
 `upper.h`
-```
+```c
 void to_upper(char *buf, const char *original);
 ```
 
 `upper.c`
-```
+```c
 #include <upper.h>
 #include <ctype.h>
 
@@ -39,7 +39,7 @@ void to_upper(char *buf, const char *original)
 ```
 
 `upper_line.c:`
-```
+```c
 #include <upper.h>
 #include <stdio.h>
 
@@ -62,7 +62,7 @@ In order to use Autotools, we need some packages installed in our system. For a 
 First, we need to create a `Makefile.am` file, which is something similar to a Makefile but with a higher level of abstraction. This could be our file:
 
 `Makefile.am`
-```
+```makefile
 AM_CFLAGS=-g -Wall -O3
 
 include_HEADERS = upper.h
@@ -87,7 +87,7 @@ I will describe its contents:
 Once we have this file, we run `autoscan` in the same folder and it will generate a file named `configure.scan` that has extracted some information of the `Makefile.am` and features some macro invocations:
 
 `configure.scan`
-```
+```c
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
@@ -116,7 +116,7 @@ In order to tailor it to our project, we will need to rename it to `configure.ac
 This could be our `configure.ac` after the substitutions:
 
 `configure.ac`
-```
+```c
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
@@ -150,7 +150,7 @@ If we deflate the package, we will have the typical source code structure of an 
 And if we want to automate the proccess, we could write a bash script that does the entire chain to create the package:
 
 `package.sh`
-```
+```bash
 #! /bin/bash
 
 version=1.0

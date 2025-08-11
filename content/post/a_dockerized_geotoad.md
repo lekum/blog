@@ -16,7 +16,7 @@ There is a great piece of software called [GeoToad](https://github.com/HughP/geo
 
 Playing with Docker, I have found interesting to create a Dockerfile for an image with GeoToad and its dependencies installed:
 
-```
+```dockerfile
 FROM ubuntu:14.04
 MAINTAINER Alejandro Guirao <lekumberri@gmail.com>
 
@@ -35,13 +35,13 @@ Basically we are installing the dependencies (`ruby`, `git`), cloning the GeoToa
 
 So, being in the same folder as the Dockerfile, we can build an image (e.g. `lekum/geotoad`, use your own registry and name) with this command:
 
-```
+```bash
 docker build -t lekum/geotoad .
 ```
 
 Once built, we can run a container with it:
 
-```
+```bash
 docker run -ti -v $PWD:/opt/gpx --name gt01 lekum/geotoad
 ```
 
@@ -49,7 +49,7 @@ This command runs the docker container named `gt01` based on the image `lekum/ge
 
 After hitting `ENTER`, we will be presented with the Text User Interface of Geotoad:
 
-```
+```txt
 ==============================================================================
 :::              // GeoToad (CURRENT) Text User Interface //               :::
 ==============================================================================
@@ -76,7 +76,7 @@ After hitting `ENTER`, we will be presented with the Text User Interface of Geot
 
 You will have to provide, at least, a username and password of Geocaching, and a location (coordinates, for example) to start searching. In addition, we would like to change the output directory to `/opt/gpx`. Once we are done with the settings, entering `s` will start the web scraping process. In one the first lines of the log, we will see the equivalent command-line invocation of `geotoad`. For example, this could be the command line for a query of *traditional* caches 5 km around the Google's geolocation of Barcelona:
 
-```
+```bash
 geotoad.rb --cacheType=traditional --delimiter='|' --distanceMax=5 --output='/opt/gpx/barcelona.gpx' --queryType=location Barcelona
 ```
 
@@ -84,7 +84,7 @@ If we don't wan't to wait watching the output of the geotoad process, we can det
 
 If we want to run it quietly, we can lauch the container overriding the empty `CMD` of the image with the options of the geotoad command, starting the container in the background. In this case, in addition, we will need to supply the username and password via command-line switches:
 
-```
+```bash
 docker run -d -v $PWD:/opt/gpx --name gt02 lekum/geotoad  -u geocaching_username -p geocaching_password --cacheType=traditional --delimiter='|' --distanceMax=5 --output='/opt/gpx/barcelona.gpx' --queryType=location Barcelona
 ```
 

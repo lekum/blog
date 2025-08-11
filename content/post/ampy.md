@@ -14,19 +14,19 @@ I have recently discovered a very handy tool written by [Adafruit](https://www.a
 
 In order to use it, just install it (preferably inside a [virtualenv](https://docs.python.org/3/library/venv.html)):
 
-```
+```bash
 pip install adafruit-ampy
 ```
 
 For ease of use, we will define an environment variable with the serial port:
 
-```
+```bash
 export AMPY_PORT=/dev/ttyUSB0
 ```
 
 And then we can use the `ampy` command:
 
-```
+```bash
 $ ampy
 Usage: ampy [OPTIONS] COMMAND [ARGS]...
 

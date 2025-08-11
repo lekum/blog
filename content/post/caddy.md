@@ -18,7 +18,7 @@ I encourage you to browse the [slides](https://github.com/fern4lvarez/presentati
 
 I decided to give it a try so I skimmed through the documentation, and realised that I just had to [download](https://caddyserver.com/download) the binary for my system and create a Caddyfile like this:
 
-```
+```caddyfile
 lekum.org {
     root /path/to/my/static/files
     log access.log
@@ -27,7 +27,7 @@ lekum.org {
 
 and start the binary using a systemd unit service, something like this:
 
-```
+```ini
 [Unit]
 Description=Caddy web server
 After=network.target
@@ -44,7 +44,7 @@ WantedBy=multi-user.target
 
 Make sure that the binary has permissions to bind ports 80 and 443. For example, issuing the command:
 
-```
+```bash
 setcap cap_net_bind_service=+ep ./caddy
 ```
 

@@ -24,7 +24,7 @@ Installing it on an Arch machine is a very straightforward process. First, we ne
 
 Then, we create a virtualenv, activate it and install `platformio` and its dependencies ([sCons](http://www.scons.org/)):
 
-```
+```bash
 $ virtualenv --python=python2 pio
 $ source ./pio/bin/activate
 $ pip install platformio && pip install --egg scons
@@ -32,13 +32,13 @@ $ pip install platformio && pip install --egg scons
 
 Then, we create a folder, we enter it and we run:
 
-```
+```bash
 $ platformio init --board=uno
 ```
 
 Then, after answering a couple of configuration questions:
 
-```
+```bash
 Would you like to enable firmware auto-uploading when project is successfully built using `platformio run` command? 
 Don't forget that you can upload firmware manually using `platformio run --target upload` command. [y/N]: y
 
@@ -62,7 +62,7 @@ Useful commands:
 
 The on-screen instructions are pretty clear. We have initialized a project targeted to the Arduino `uno` board and it has created several files and subfolders inside the current folder:
 
-```
+```bash
 .
 ├── lib
 ├── platformio.ini
@@ -71,7 +71,7 @@ The on-screen instructions are pretty clear. We have initialized a project targe
 
 The file `platform.ini` stores the settings of the project, including the target architecture:
 
-```
+```ini
 # Project Configuration File
 [env:uno]
 platform = atmelavr
@@ -82,7 +82,7 @@ targets = upload
 
 The subfolders `src` and `lib` are the place to store the sketch and libraries, respectively, for your project. Once we have placed them inside, we run:
 
-```
+```bash
 $ platformio run
 ```
 An interactive prompt asks for permission to install the `atmvelavr` platform support. Once we say *yes*, it compiles our project and uploads it to the Arduino Uno (yeah!).

@@ -16,7 +16,7 @@ In order to do so, the first thing to do is install the MicroPython firmware on 
 
 - Install `esptool.py`:
 
-```
+```bash
 python3 -m venv esptool
 source esptool/bin/activate
 (esptool) pip install esptool
@@ -26,13 +26,13 @@ source esptool/bin/activate
 
 - Erase the flash memory of the board:
 
-```
+```bash
 esptool.py --port /dev/ttyUSB0 erase_flash
 ```
 
 - Flash with the firmware:
 
-```
+```bash
 esptool.py --port /dev/ttyUSB0 write_flash -fm dio -fs 32m 0 esp8266-20170108-v1.8.7.bin
 ```
 
@@ -40,13 +40,13 @@ I found that particular `esptool` options in [this thread](https://forum.micropy
 
 - Install `picocom` and connect to the serial interface:
 
-```
+```bash
 picocom -b 115200 /dev/ttyUSB0
 ```
 
 - You should see the MicroPython REPL:
 
-```
+```python
 MicroPython v1.8.7-7-gb5a1a20a3 on 2017-01-09; ESP module with ESP8266
 Type "help()" for more information.
 >>>
@@ -58,7 +58,7 @@ At this point, we have MicroPython installed on the board. Now, we'll have to co
 
 - Connect it to a WiFi network and take note of the IP address:
 
-```
+```python
 >> import network
 >> sta_if = network.WLAN(network.STA_IF)
 >> sta_if.active(True)
@@ -67,7 +67,8 @@ At this point, we have MicroPython installed on the board. Now, we'll have to co
 ```
 
 In order to enable remote upload, connect to the MicroPython REPL via `picocom` and run:
-```
+
+```python
 import webrepl_setup
 Would you like to (E)nable or (D)isable it running on boot?
 (Empty line to quit)
@@ -78,7 +79,7 @@ Press `(E)nable` and set a password.
 
 Finally, download the [webrepl client](https://github.com/micropython/webrepl) and you will be able to upload the `main.py` file to the board with this command:
 
-```
+```bash
 ./webrepl_cli.py main.py <YOUR_IP>:/main.py
 ```
 
@@ -86,7 +87,7 @@ Now that we have our development environment ready, let's start the coding. Micr
 
 First, we will create two helper functions to perform the connection to the WiFi and to send messages to Slack. In order implement the latter, we will use the [urequests](https://github.com/micropython/micropython-lib/blob/master/urequests/urequests.py) library, that is included in the MicroPython standard firmware, and that mimics the famous Python [requests](http://docs.python-requests.org/en/master/) library:
 
-```
+```python
 import network
 import urequests
 import time
@@ -129,7 +130,7 @@ You can find examples of usage for the different libraries included (`network`, 
 
 Finally, we will have to create the main loop, that is quite similar to the Arduino version:
 
-```
+```python
 if __name__ == "__main__":
 
     SSID = "<YOUR_SSID>"
